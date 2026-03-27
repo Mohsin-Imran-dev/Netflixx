@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Netflix Pakistan</title>
+    <link rel="icon" href="images/N.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.7.0/dist/flowbite.bundle.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="m-0 p-0 bg-black">
+    <header class="relative">
+      <img
+        class="absolute top-0 left-0 -z-20 w-full h-full object-cover"
+        src="images/background.png"
+        alt=""
+      />
+      <div class="absolute top-0 left-0 -z-10 w-full h-full bg-black/60"></div>
+
+      <div
+        class="topContent flex justify-between items-center w-full px-4 sm:px-8 md:px-16 lg:px-24"
+      >
+        <svg
+          id="netflixLogo"
+          fill="red"
+          height="150px"
+          width="150px"
+          viewBox="0 0 111 30"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"
+            ></path>
+          </g>
+        </svg>
+        <button id="signInBtn">Sign In</button>
+      </div>
+
+      <!-- Heading -->
+      <div class="heading text-center px-4 py-5">
+        <h1
+          class="text-2xl sm:text-4xl text-white md:text-5xl lg:text-6xl font-extrabold tracking-tight"
+        >
+          Unlimited movies, TV<br />shows, and more
+        </h1>
+        <br />
+        <h2 class="text-base sm:text-xl text-white md:text-2xl font-bold">
+          Starts at Rs 250. Cancel anytime.
+        </h2>
+        <br /><br />
+        <h2
+          class="text-xs sm:text-sm text-white md:text-base lg:text-xl font-bold px-4"
+        >
+          Ready to watch? Enter your email to create or restart your membership.
+        </h2>
+      </div>
+
+      <!-- Form -->
+      <div
+        class="formWithBtn flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full px-4 pb-16 md:pb-24"
+      >
+        <div class="relative w-full sm:w-80 md:w-96">
+          <input
+            type="text"
+            id="floating_filled"
+            class="block px-4 pb-2.5 pt-5 w-full text-sm sm:text-base text-white bg-transparent border border-gray-400 rounded-md focus:ring-2 peer"
+            placeholder=" "
+          />
+          <label
+            for="floating_filled"
+            class="absolute text-white/70 duration-300 transform -translate-y-4 scale-75 top-4 left-4 z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 text-sm sm:text-base"
+            >Email Address</label
+          >
+        </div>
+        <button id="startBtn">
+          Get Started
+          <svg class="startIcon" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="m15.586 12-7.293 7.293 1.414 1.414 8-8a1 1 0 0 0 0-1.414l-8-8-1.414 1.414z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="forBg"></div>
+    <!-- Next Section -->
+    <main class="bg-black mt-14 flex flex-col text-white">
+      <div class="trendingMovies px-6 mx-10 py-5">
+        <h2 class="font-bold text-3xl ml-[2vw] mb-6 centerr">Trending Now</h2>
+
+        <div class="slider-wrapper py-5 px-10">
+          <button class="nav prev">❮</button>
+
+          <div class="movies" id="movieSlider">
+            <div class="movie"><img src="images/dhurandar.webp" /></div>
+            <div class="movie"><img src="images/war machine.webp" /></div>
+            <div class="movie"><img src="images/one pic movie.webp" /></div>
+            <div class="movie"><img src="images/peaky blinders.webp" /></div>
+            <div class="movie"><img src="images/border movie.webp" /></div>
+            <div class="movie"><img src="images/anora.webp" /></div>
+            <div class="movie"><img src="images/taskaree.webp" /></div>
+            <div class="movie"><img src="images/kapil.webp" /></div>
+            <div class="movie"><img src="images/stranger things.webp" /></div>
+            <div class="movie"><img src="images/night agent.webp" /></div>
+          </div>
+
+          <button class="nav next">❯</button>
+        </div>
+      </div>
+
+      <div class="reasonToLearn px-6 mx-10 py-5">
+        <h2 class="font-bold text-3xl ml-[2vw] mt-4 mb-2 centerr">
+          More Reasons to Join
+        </h2>
+        <div class="reasons flex justify-center w-auto gap-5 mt-6 flex-wrap">
+          <div class="reason">
+            <div class="text">
+              <h1>Enjoy on your TV</h1>
+              <p>
+                Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
+                Blu-ray players, and more.
+              </p>
+            </div>
+            <div class="pic">
+              <img src="images/computer.svg" alt="" />
+            </div>
+          </div>
+          <div class="reason">
+            <div class="text">
+              <h1>Download your shows to watch offline</h1>
+              <p>
+                Save your favorites easily and always have something to watch.
+              </p>
+            </div>
+
+            <div class="pic">
+              <img src="images/download img.svg" alt="" />
+            </div>
+          </div>
+          <div class="reason">
+            <div class="text">
+              <h1>Watch everywhere</h1>
+              <p>
+                Stream unlimited movies and TV shows on your phone, tablet,
+                laptop, and TV.
+              </p>
+            </div>
+
+            <div class="pic">
+              <img src="images/ice cream.svg" alt="" />
+            </div>
+          </div>
+          <div class="reason">
+            <div class="text">
+              <h1>Create profiles for kids</h1>
+              <p>
+                Send kids on adventures with their favorite characters in a
+                space made just for them — free with your membership.
+              </p>
+            </div>
+            <div class="pic">
+              <img src="images/double face.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-3xl font-bold lg:ml-[12vw] mt-10 centerr">
+        Frequently Asked Questions
+      </div>
+      <div class="accordion py-6 mx-10">
+        <div
+          id="accordion-collapse"
+          data-accordion="collapse"
+          class="rounded-base w-[80%] my-0 mx-auto border-none border-default overflow-hidden shadow-xs"
+        >
+          <!-- Accordion Item 1 -->
+          <h2 id="accordion-collapse-heading-1">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white rounded-t-base border border-y-black border-t-0 border-x-0 border-b-default gap-3 bg-[#2D2D2D] hover:bg-[#414141] transition-colors"
+              data-accordion-target="#accordion-collapse-body-1"
+              aria-expanded="true"
+              aria-controls="accordion-collapse-body-1"
+            >
+              <span>What is Netflix?</span>
+              <svg
+                data-accordion-icon
+                class="w-5 h-5 shrink-0 transition-transform duration-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m5 15 7-7 7 7"
+                />
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-collapse-body-1"
+            class="hidden border border-s-0 border-e-0 border-t-0 border-b-default bg-[#2D2D2D] overflow-hidden"
+            style="max-height: 0; transition: max-height 0.3s ease"
+            aria-labelledby="accordion-collapse-heading-1"
+          >
+            <div class="p-4 md:p-5 text-white">
+              <p class="mb-2">
+                Netflix is a streaming service that offers a wide variety of
+                award-winning TV shows, movies, anime, documentaries, and more
+                on thousands of internet-connected devices.
+              </p>
+              <p>
+                You can watch as much as you want, whenever you want without a
+                single commercial – all for one low monthly price. There's
+                always something new to discover and new TV shows and movies are
+                added every week!
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <h2 id="accordion-collapse-heading-2">
+            <button
+              type="button"
+              class="flex items-center border-y-black mt-2 justify-between w-full p-5 font-medium rtl:text-right text-white border border-x-0 border-b-default border-t-0 gap-3 bg-[#2D2D2D] hover:bg-[#414141] transition-colors"
+              data-accordion-target="#accordion-collapse-body-2"
+              aria-expanded="false"
+              aria-controls="accordion-collapse-body-2"
+            >
+              <span>Is there a Figma file available?</span>
+              <svg
+                data-accordion-icon
+                class="w-5 h-5 shrink-0 transition-transform duration-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m5 15 7-7 7 7"
+                />
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-collapse-body-2"
+            class="hidden border border-y-black border-s-0 border-e-0 border-t-0 border-b-default bg-[#2D2D2D] overflow-hidden"
+            style="max-height: 0; transition: max-height 0.3s ease"
+            aria-labelledby="accordion-collapse-heading-2"
+          >
+            <div class="p-4 md:p-5 text-white">
+              <p class="mb-2">
+                Flowbite is first conceptualized and designed using the Figma
+                software so everything you see in the library has a design
+                equivalent in our Figma file.
+              </p>
+              <p>
+                Check out the
+                <a
+                  href="https://flowbite.com/figma/"
+                  class="text-fg-brand hover:underline"
+                  >Figma design system</a
+                >
+                based on the utility classes from Tailwind CSS and components
+                from Flowbite.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <h2 id="accordion-collapse-heading-3">
+            <button
+              type="button"
+              class="flex items-center mt-2 justify-between w-full p-5 font-medium rtl:text-right text-white gap-3 bg-[#2D2D2D] hover:bg-[#414141] transition-colors"
+              data-accordion-target="#accordion-collapse-body-3"
+              aria-expanded="false"
+              aria-controls="accordion-collapse-body-3"
+            >
+              <span
+                >What are the differences between Flowbite and Tailwind
+                UI?</span
+              >
+              <svg
+                data-accordion-icon
+                class="w-5 h-5 shrink-0 transition-transform duration-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m5 15 7-7 7 7"
+                />
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-collapse-body-3"
+            class="hidden border border-s-0 border-e-0 border-t-0 border-b-default bg-[#2D2D2D] overflow-hidden"
+            style="max-height: 0; transition: max-height 0.3s ease"
+            aria-labelledby="accordion-collapse-heading-3"
+          >
+            <div
+              class="p-4 md:p-5 border border-y-black border-t-default border-b-0 border-x-0 text-white"
+            >
+              <p class="mb-2">
+                The main difference is that the core components from Flowbite
+                are open source under the MIT license, whereas Tailwind UI is a
+                paid product. Another difference is that Flowbite relies on
+                smaller and standalone components, whereas Tailwind UI offers
+                sections of pages.
+              </p>
+              <p class="mb-2">
+                However, we actually recommend using both Flowbite, Flowbite
+                Pro, and even Tailwind UI as there is no technical reason
+                stopping you from using the best of two worlds.
+              </p>
+              <p class="mb-2">Learn more about these technologies:</p>
+              <ul class="ps-5 list-disc">
+                <li>
+                  <a
+                    href="https://flowbite.com/pro/"
+                    class="text-fg-brand hover:underline"
+                    >Flowbite Pro</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://tailwindui.com/"
+                    rel="nofollow"
+                    class="text-fg-brand hover:underline"
+                    >Tailwind UI</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-center mt-10">
+        Ready to watch? Enter your email to create or restart your membership.
+      </h3>
+      <!-- Form -->
+      <div
+        class="formWithBtn flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full px-4 pb-16 md:pb-24"
+      >
+        <div class="relative w-full sm:w-80 md:w-96">
+          <input
+            type="text"
+            id="floating_filled"
+            class="block px-4 pb-2.5 pt-5 w-full text-sm sm:text-base text-white bg-transparent border border-gray-400 rounded-md focus:ring-2 peer"
+            placeholder=" "
+          />
+          <label
+            for="floating_filled"
+            class="absolute text-white/70 duration-300 transform -translate-y-4 scale-75 top-4 left-4 z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 text-sm sm:text-base"
+            >Email Address</label
+          >
+        </div>
+        <button id="startBtn">
+          Get Started
+          <svg class="startIcon" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="m15.586 12-7.293 7.293 1.414 1.414 8-8a1 1 0 0 0 0-1.414l-8-8-1.414 1.414z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </main>
+
+    <footer class="mx-20">
+      <footer class="bg-neutral-primary text-white">
+        <div class="mx-auto w-full max-w-screen-xl">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4 py-6 lg:py-8 innerFooter"
+          >
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-heading uppercase">
+                Company
+              </h2>
+              <ul class="text-body font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">About</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Careers</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Brand Center</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-heading uppercase">
+                Help center
+              </h2>
+              <ul class="text-body font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Discord Server</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Twitter</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Facebook</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-heading uppercase">
+                Legal
+              </h2>
+              <ul class="text-body font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Licensing</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-heading uppercase">
+                Download
+              </h2>
+              <ul class="text-body font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">iOS</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Android</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Windows</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">MacOS</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="px-4 py-6 bg-neutral-secondary-soft md:flex md:items-center md:justify-between"
+          >
+            <span class="text-sm text-body sm:text-center"
+              >© 2026 <a href="https://netflix.com/">Netflix Pak™</a>. All
+              Rights Reserved.
+            </span>
+            <div
+              class="flex mt-4 sm:justify-center md:mt-0 space-x-2 rtl:space-x-reverse"
+            >
+              <a href="#" class="text-body hover:text-heading">
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="sr-only">Facebook page</span>
+              </a>
+              <a href="#" class="text-body hover:text-heading ms-5">
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18.942 5.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.586 11.586 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3 17.392 17.392 0 0 0-2.868 11.662 15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.638 10.638 0 0 1-1.706-.83c.143-.106.283-.217.418-.331a11.664 11.664 0 0 0 10.118 0c.137.114.277.225.418.331-.544.328-1.116.606-1.71.832a12.58 12.58 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM8.678 14.813a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.929 1.929 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
+                  />
+                </svg>
+                <span class="sr-only">Discord community</span>
+              </a>
+              <a href="#" class="text-body hover:text-heading ms-5">
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
+                  />
+                </svg>
+                <span class="sr-only">Twitter page</span>
+              </a>
+              <a href="#" class="text-body hover:text-heading ms-5">
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="sr-only">GitHub account</span>
+              </a>
+              <a href="#" class="text-body hover:text-heading ms-5">
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="sr-only">Dribbble account</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </footer>
+    <script src="script.js"></script>
+    <footer></footer>
+  </body>
+</html>
