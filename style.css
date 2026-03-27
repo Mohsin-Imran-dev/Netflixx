@@ -289,6 +289,9 @@ header .absolute.inset-0 {
     height: 100px;
     width: 100px;
   }
+  .centerr{
+    text-align: center;
+  }
 }
 
 @media (max-width: 720px) {
@@ -498,6 +501,9 @@ main {
 @media (max-width: 1200px) {
   .reason {
     flex: 0 0 calc((100% - 72px) / 4);
+    min-height: auto; /* remove fixed min-height */
+    height: auto;     /* let it shrink naturally based on content */
+    padding: 15px; 
   }
   .reasons{
     flex-direction: column;
@@ -507,6 +513,9 @@ main {
 @media (max-width: 900px) {
   .reason {
     flex: 0 0 calc((100% - 48px) / 3);
+    min-height: auto; /* remove fixed min-height */
+    height: auto;     /* let it shrink naturally based on content */
+    padding: 15px; 
   }
   .reasons{
     flex-direction: column;
